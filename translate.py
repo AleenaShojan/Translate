@@ -8,6 +8,6 @@ option = st.selection(
 	'To which language you wish to translate this text to?',
 	('Malayalam', 'Hindi', 'Tamil'))
 if st.button('Translate'):
-		translator = Translator()
-		translation = translator.translate(input, dest = option)
-		st.write(translation.text)
+	translator = Translator()
+	translation = translator.translate(input, dest = option)
+	st.write(translation.text)
