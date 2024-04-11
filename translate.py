@@ -3,11 +3,11 @@ from googletrans import Translator
 
 
 st. header('Machine Translation Demo')
-input = st.text_area("Please enter the text", calue = '')
+input = st.text_area("Please enter the text", value = '')
 option = st.selection(
 	'To which language you wish to translate this text to?',
 	('Malayalam', 'Hindi', 'Tamil'))
-	if st.button('Translate'):
+if st.button('Translate'):
 		translator = Translator()
 		translation = translator.translate(input, dest = option)
 		st.write(translation.text)
